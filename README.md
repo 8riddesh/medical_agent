@@ -1,15 +1,28 @@
 🩺 Medical Assistant – AI-Powered Personal Health Companion
-A smart medical assistant web application designed to help users manage their health and well-being. It combines emotional tracking, document scanning, conversational support, and profile management into one intuitive platform.
+An intelligent medical assistant web application that empowers users to manage their health through emotional tracking, prescription scanning, AI-based interaction, and personalized profile management — all enhanced by n8n workflow automation.
 
 🔧 Features
 🧠 Emotional Diary
-Users can record and track their emotions daily. The system helps visualize trends and provides emotional health insights over time.
+Users can log their emotions daily. Visualizations and summaries help users reflect on their mental well-being over time.
 
 📄 OCR for Medical Documents & Prescriptions
-Upload prescriptions or other handwritten/printed medical documents. Our built-in OCR engine extracts and structures the text for easy reference and interaction.
+Upload handwritten or printed medical documents. Integrated OCR (Tesseract/EasyOCR) extracts key data such as medication names, dosages, and doctor details for easier understanding and tracking.
 
 🤖 AI Chatbot Assistant
-A conversational agent that can answer health-related queries, guide users through their emotional or medical concerns, and help interpret prescription information extracted via OCR.
+An interactive chatbot powered by LLMs (e.g., OpenAI, Ollama, or LangChain agents) answers user queries, explains prescriptions, and provides emotional support based on diary logs.
 
 👤 Profile Manager
-Each user has a dedicated profile with their personal information, emotion history, scanned documents, and chatbot interactions stored securely.
+Secure user profiles store personal details, uploaded documents, emotional logs, and chatbot conversations. Data is managed with Supabase/PostgreSQL or Firebase.
+
+🔄 n8n Workflow Automation
+
+Google Drive Upload Integration: Users can upload images of prescriptions or reports, which trigger n8n workflows for OCR processing and deletion after extraction.
+
+Tesseract OCR Node: Automatically extracts text from images as part of the n8n flow.
+
+LangChain Agent Workflow: Supports document-based question-answering, contextual responses, and memory integration.
+
+Supabase & Pinecone Integration: Enables vector storage of embeddings for personalized search and response generation.
+
+Webhook-Based Communication: Streamlit or FastAPI frontend communicates with n8n for real-time, modular backend automation.
+
